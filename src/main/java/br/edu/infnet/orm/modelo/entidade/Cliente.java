@@ -1,8 +1,10 @@
 package br.edu.infnet.orm.modelo.entidade;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +23,9 @@ public class Cliente {
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Contato> contatos;
+	
+	@Column(name = "data_nascimento")
+	private LocalDate dataNascimento;
 
 	public Cliente() {
 	}
@@ -54,6 +59,22 @@ public class Cliente {
 
 	public void setContatos(List<Contato> contatos) {
 		this.contatos = contatos;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 
 }
