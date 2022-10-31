@@ -13,6 +13,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         
         <class>br.edu.infnet.orm.modelo.entidade.Cliente</class>
+        <class>br.edu.infnet.orm.modelo.entidade.Contato</class>
         
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
