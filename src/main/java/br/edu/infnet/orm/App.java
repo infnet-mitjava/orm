@@ -1,10 +1,9 @@
 package br.edu.infnet.orm;
 
-import java.util.List;
-
-import br.edu.infnet.orm.modelo.entidade.Cliente;
+import br.edu.infnet.orm.modelo.entidade.Produto;
+import br.edu.infnet.orm.modelo.entidade.Sobremesa;
 import br.edu.infnet.orm.modelo.persistencia.IDAO;
-import br.edu.infnet.orm.modelo.persistencia.imple.ClienteDAO;
+import br.edu.infnet.orm.modelo.persistencia.imple.ProdutoDAO;
 
 /**
  * Hello world!
@@ -15,7 +14,14 @@ public class App
     public static void main( String[] args )
     {
         
-    	IDAO dao = new ClienteDAO();
+    	IDAO dao = new ProdutoDAO();
+    	
+    	Sobremesa sobremesa = new Sobremesa();
+    	sobremesa.setCodigo(1);
+    	sobremesa.setNome("pudim");
+    	sobremesa.setValor(10);
+    	sobremesa.setDoce(true);
+		dao.salvar(sobremesa);
     	
 //    	EntityManager entityManager = JpaUtil.createEntityManager();
 //    	
@@ -48,9 +54,9 @@ public class App
 //		dao.salvar(cliente);
     	
 //    	
-    	List<Cliente> clientes = dao.listaTodos();
-    	System.out.println(clientes);
-    	System.out.println(clientes.size());
+//    	List<Cliente> clientes = dao.listaTodos();
+//    	System.out.println(clientes);
+//    	System.out.println(clientes.size());
 //    	
 //    	
 //    	for (Cliente cliente : clientes) {
