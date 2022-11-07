@@ -1,4 +1,4 @@
-package br.edu.infnet.orm.modelo.persistencia;
+package br.edu.infnet.orm.modelo.persistencia.imple;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
