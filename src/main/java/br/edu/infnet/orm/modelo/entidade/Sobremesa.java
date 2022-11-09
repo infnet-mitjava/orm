@@ -1,10 +1,9 @@
 package br.edu.infnet.orm.modelo.entidade;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(name = "produto_id")
+//@PrimaryKeyJoinColumn(name = "produto_id")
 public class Sobremesa extends Produto {
 
 	private int quantidade;

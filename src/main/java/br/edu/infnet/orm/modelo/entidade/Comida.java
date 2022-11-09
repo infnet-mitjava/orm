@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@PrimaryKeyJoinColumn(name = "produto_id")
+//@PrimaryKeyJoinColumn(name = "produto_id")
 public class Comida extends Produto {
 
 	private float peso;
