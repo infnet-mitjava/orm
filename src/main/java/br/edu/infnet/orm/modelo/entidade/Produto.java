@@ -1,6 +1,5 @@
 package br.edu.infnet.orm.modelo.entidade;
 
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,8 +8,7 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TIPO")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Produto {
 
 	@Id

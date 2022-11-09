@@ -1,6 +1,10 @@
 package br.edu.infnet.orm;
 
+import java.util.List;
+
 import br.edu.infnet.orm.modelo.entidade.Comida;
+import br.edu.infnet.orm.modelo.entidade.Produto;
+import br.edu.infnet.orm.modelo.entidade.Sobremesa;
 import br.edu.infnet.orm.modelo.persistencia.ProdutoDAO;
 
 /**
@@ -55,7 +59,17 @@ public class App {
 		dao.salvar(comida);
 		
 		
+		Sobremesa sobremesa = new Sobremesa();
+		sobremesa.setCodigo(2);
+		sobremesa.setDoce(true);
+		sobremesa.setInformacao("doce de geleia com goiabada");
+		sobremesa.setQuantidade(2);
+		sobremesa.setValor(25);
+		dao.salvar(sobremesa);
 		
-
+		List<Produto> obterPorTipo = (List<Produto>) dao.obterProduto();
+		System.out.println(obterPorTipo);
+//		
+		
 	}
 }

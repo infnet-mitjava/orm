@@ -1,10 +1,10 @@
 package br.edu.infnet.orm.modelo.entidade;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue("C")
+@PrimaryKeyJoinColumn(name = "produto_id")
 public class Comida extends Produto {
 
 	private float peso;
